@@ -4,9 +4,11 @@
 <table>
   <tr>
     <th>Messages</th>
+    <th>Actions</th>
     <tr>
       <% @tweets.each do |tweet| %>
       <td> tweet.body </td>
+      <td><%= link_to 'Show', tweet_path(tweet.id) %></td>
     </tr>
   </tr>
   <% end %>
