@@ -9,6 +9,7 @@
       <% @tweets.each do |tweet| %>
       <td> tweet.body </td>
       <td><%= link_to 'Show', tweet_path(tweet.id) %></td>
+      <td><%= link_to 'Edit', edit_tweet_path(tweet.id)%></td>
     </tr>
   </tr>
   <% end %>

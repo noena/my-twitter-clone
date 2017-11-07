@@ -1,0 +1,7 @@
+<h1>Edit Tweet</h1>
+
+<%= simple_form_for @tweet, method: :patch do |f| %>
+  <%= f.input :body %>
+  <%= f.button :submit %>
+<% end %>
+<%= link_to 'Back', tweets_path%>
