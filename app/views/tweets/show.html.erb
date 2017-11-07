@@ -1,5 +1,5 @@
-<h1>Here is the message</h1>
-<h2><%=link_to @tweet.user.email, profiles_path(@tweet.user.id) %></h2>
+
+<h2>user: <%=link_to @tweet.user.first_name, profile_path(@tweet.user.id) %></h2>
 
 <%= @tweet.body %><br>
 <%= link_to 'Back', tweets_path%>

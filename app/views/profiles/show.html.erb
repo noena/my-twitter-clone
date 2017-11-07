@@ -1,0 +1,16 @@
+<h1>Here are <%= @user.first_name %>'s tweets.</h1>
+<table>
+  <tr>
+    <th>Messages</th>
+    <th>Actions</th>
+    <tr>
+      <% @tweets.each do |tweet| %>
+      <td><%= tweet.body %> </td>
+      <td><%= link_to 'Show', tweet_path(tweet.id) %></td>
+      <td><%= link_to 'Edit', edit_tweet_path(tweet.id)%></td>
+      <td><%= link_to 'Delete', tweet_path(tweet.id), method: :delete %></td>
+    </tr>
+  </tr>
+  <% end %>
+</table>
+<%= link_to 'Back', tweets_path%>
