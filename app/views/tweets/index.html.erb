@@ -10,8 +10,9 @@
       <td><%= tweet.body %> </td>
       <td><%= link_to 'Show', tweet_path(tweet.id) %></td>
       <td><%= link_to 'Edit', edit_tweet_path(tweet.id)%></td>
-      <td><%= link_to 'Add New', new_tweet_path(tweet.id)%></td>
+      <td><%= link_to 'Delete', tweet_path(tweet.id), method: :delete %></td>
     </tr>
   </tr>
   <% end %>
-</table>
+</table> <br>
+<%= link_to 'Add New', new_tweet_path%>

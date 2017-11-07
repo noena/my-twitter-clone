@@ -32,6 +32,11 @@ class TweetsController < ApplicationController
     redirect_to tweets_path
   end
 
+  def destroy
+    Tweet.destroy(params[:id])
+    redirect_to tweets_path
+  end
+
 private
 def tweet_params
   params.require(:tweet).permit(:body)

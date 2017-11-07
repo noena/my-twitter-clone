@@ -1,12 +1,4 @@
 <h1>Here is the message</h1>
 
-<table>
-  <tr>
-    <th>Message</th>
-    <th>Action</th>
-    <tr>
-      <td><%= @tweet.body %></td>
-      <td><%= link_to 'Back', tweets_path%></td>
-    </tr>
-  </tr>
-</table>
+<%= @tweet.body %><br>
+<%= link_to 'Back', tweets_path%>
